@@ -1,0 +1,983 @@
+{
+  "started_at_ms": 1772038720597,
+  "finished_at_ms": 1772039321246,
+  "requested_run_for_s": 600,
+  "actual_elapsed_s": 600.0017033,
+  "exit_reason": "timeout",
+  "effective_config": {
+    "symbol": "BTCUSDT",
+    "qty": 0.01,
+    "transport": "ws_api",
+    "discount_bps": 1000.0,
+    "thresholds": {
+      "imbalance_enter": 0.7,
+      "tilt_enter_bps": 0.0007,
+      "imbalance_exit": 0.4,
+      "tilt_exit_bps": 0.0004,
+      "cooldown_ms": 1500
+    },
+    "max_actions_per_minute": 10,
+    "max_consecutive_errors": 5,
+    "latency_spike_ms": 2500,
+    "max_latency_spikes": 5,
+    "rest_url": "https://testnet.binance.vision",
+    "ws_api_url": "wss://ws-api.testnet.binance.vision/ws-api/v3"
+  },
+  "counters": {
+    "triggers_long": 313,
+    "triggers_short": 351,
+    "entries": 50,
+    "cancels": 50,
+    "cooldown_skips": 48,
+    "rearm_wait_skips": 4,
+    "errors": 0,
+    "action_rate_limit_skips": 613
+  },
+  "place_rtt_us": {
+    "samples": 50,
+    "p50": 294426,
+    "p95": 295838,
+    "p99": 1709565
+  },
+  "cancel_rtt_us": {
+    "samples": 50,
+    "p50": 294303,
+    "p95": 327135,
+    "p99": 328636
+  },
+  "latency_spike_stats": {
+    "threshold_ms": 2500,
+    "threshold_us": 2500000,
+    "warmup_actions_ignored": 2,
+    "last_n_rtt_us": [
+      295838,
+      294086,
+      294285,
+      293422,
+      295791,
+      293317,
+      294239,
+      292968,
+      294051,
+      293047,
+      294946,
+      294541,
+      293905,
+      293560,
+      295095,
+      323544,
+      293943,
+      294354,
+      294047,
+      293561
+    ],
+    "spikes_count_total": 0,
+    "max_rtt_us": 1709565,
+    "spike_streak_final": 0
+  },
+  "state_transitions": [
+    {
+      "ts_ms": 1772038726914,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772038729314,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772038729414,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772038731014,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772038731614,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772038731714,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772038733514,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772038733814,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772038733914,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772038737414,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772038737514,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772038737614,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772038741214,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772038741414,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772038741514,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772038788414,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772038789414,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772038789514,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772038797914,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772038799914,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772038800014,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772038801514,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772038802714,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772038802814,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772038805014,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772038805714,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772038805814,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772038808416,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772038808814,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772038808914,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772038848514,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772038849614,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772038849714,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772038857956,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772038859914,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_adverse"
+    },
+    {
+      "ts_ms": 1772038860014,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772038862914,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772038863314,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772038863414,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772038865414,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772038867114,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772038867514,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772038869414,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772038869714,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772038869814,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772038909214,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772038909814,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_adverse"
+    },
+    {
+      "ts_ms": 1772038910314,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772038918214,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772038919914,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_adverse"
+    },
+    {
+      "ts_ms": 1772038920414,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772038923214,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772038923314,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772038923414,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772038925414,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772038927114,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772038927214,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772038929614,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772038929814,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772038929914,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772038971014,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772038971114,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772038971414,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772038980114,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772038980314,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772038980414,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772038985914,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772038986014,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772038986114,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772038988314,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772038988414,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772038989014,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772038990014,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772038990714,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772038990814,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772039031114,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772039032714,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_adverse"
+    },
+    {
+      "ts_ms": 1772039032914,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772039040714,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772039040914,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772039041114,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772039047814,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772039048114,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772039048214,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772039050714,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772039051614,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772039051714,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772039053714,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772039054114,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772039054214,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772039091314,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772039093914,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772039094014,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772039101914,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772039102114,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772039102514,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772039112714,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772039117314,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772039118114,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772039120414,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772039120514,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772039120614,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772039124014,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772039124214,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772039124314,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772039152114,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772039153914,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_adverse"
+    },
+    {
+      "ts_ms": 1772039154314,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772039163014,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772039163714,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772039163914,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772039172914,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772039177314,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_adverse"
+    },
+    {
+      "ts_ms": 1772039177414,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772039183414,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772039183614,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772039183714,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772039185614,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772039185814,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772039185914,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772039214314,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772039218114,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772039218714,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772039223614,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772039223814,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772039223914,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772039233214,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772039237314,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772039237414,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772039243714,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772039243814,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_adverse"
+    },
+    {
+      "ts_ms": 1772039243914,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772039245914,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772039246514,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772039246614,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772039274314,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772039278114,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_adverse"
+    },
+    {
+      "ts_ms": 1772039279114,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772039283614,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772039283814,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772039283914,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772039298614,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772039299214,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772039299314,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772039305514,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772039306215,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772039306314,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772039307914,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772039308114,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772039308314,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    }
+  ],
+  "error_reasons": {},
+  "stopped_by_kill_switch": false,
+  "kill_switch_reason": null
+}

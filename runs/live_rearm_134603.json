@@ -1,0 +1,160 @@
+{
+  "started_at_ms": 1772037972830,
+  "finished_at_ms": 1772037999810,
+  "effective_config": {
+    "symbol": "BTCUSDT",
+    "qty": 0.01,
+    "transport": "ws_api",
+    "discount_bps": 1000.0,
+    "thresholds": {
+      "imbalance_enter": 0.7,
+      "tilt_enter_bps": 0.0007,
+      "imbalance_exit": 0.4,
+      "tilt_exit_bps": 0.0004,
+      "cooldown_ms": 1500
+    },
+    "max_actions_per_minute": 10,
+    "max_consecutive_errors": 5,
+    "latency_spike_ms": 2500,
+    "max_latency_spikes": 5,
+    "rest_url": "https://testnet.binance.vision",
+    "ws_api_url": "wss://ws-api.testnet.binance.vision/ws-api/v3"
+  },
+  "counters": {
+    "triggers_long": 6,
+    "triggers_short": 6,
+    "entries": 5,
+    "cancels": 5,
+    "cooldown_skips": 1,
+    "rearm_wait_skips": 0,
+    "errors": 0,
+    "action_rate_limit_skips": 1
+  },
+  "place_rtt_us": {
+    "samples": 5,
+    "p50": 310010,
+    "p95": 1778070,
+    "p99": 1778070
+  },
+  "cancel_rtt_us": {
+    "samples": 5,
+    "p50": 310039,
+    "p95": 310694,
+    "p99": 310694
+  },
+  "latency_spike_stats": {
+    "threshold_ms": 2500,
+    "threshold_us": 2500000,
+    "warmup_actions_ignored": 2,
+    "last_n_rtt_us": [
+      1778070,
+      310039,
+      310010,
+      309169,
+      310246,
+      310316,
+      309775,
+      309127,
+      309848,
+      310694
+    ],
+    "spikes_count_total": 0,
+    "max_rtt_us": 1778070,
+    "spike_streak_final": 0
+  },
+  "state_transitions": [
+    {
+      "ts_ms": 1772037977014,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772037978414,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772037978514,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772037980914,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772037981114,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772037981214,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772037989114,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772037990614,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772037990714,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772037992314,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772037992414,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772037992514,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772037995314,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772037995514,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772037995614,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    }
+  ],
+  "error_reasons": {},
+  "stopped_by_kill_switch": false,
+  "kill_switch_reason": null
+}

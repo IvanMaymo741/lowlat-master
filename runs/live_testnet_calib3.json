@@ -1,0 +1,47 @@
+{
+  "started_at_ms": 1772035830112,
+  "finished_at_ms": 1772035840684,
+  "effective_config": {
+    "symbol": "BTCUSDT",
+    "qty": 0.01,
+    "transport": "ws_api",
+    "discount_bps": 1000.0,
+    "thresholds": {
+      "imbalance_enter": 0.7,
+      "tilt_enter_bps": 0.0007,
+      "imbalance_exit": 0.4,
+      "tilt_exit_bps": 0.0004,
+      "cooldown_ms": 1500
+    },
+    "max_actions_per_minute": 10,
+    "max_consecutive_errors": 5,
+    "latency_spike_ms": 750,
+    "max_latency_spikes": 3,
+    "rest_url": "https://testnet.binance.vision",
+    "ws_api_url": "wss://ws-api.testnet.binance.vision/ws-api/v3"
+  },
+  "counters": {
+    "triggers_long": 4,
+    "triggers_short": 1,
+    "entries": 2,
+    "cancels": 1,
+    "cooldown_skips": 1,
+    "errors": 0,
+    "action_rate_limit_skips": 0
+  },
+  "place_rtt_us": {
+    "samples": 2,
+    "p50": 1809365,
+    "p95": 1809365,
+    "p99": 1809365
+  },
+  "cancel_rtt_us": {
+    "samples": 1,
+    "p50": 321921,
+    "p95": 321921,
+    "p99": 321921
+  },
+  "error_reasons": {},
+  "stopped_by_kill_switch": true,
+  "kill_switch_reason": "latency_spike_streak=3 reached limit=3 (> 750 ms)"
+}

@@ -1,0 +1,53 @@
+[general]
+symbol = "BTCUSDT"
+duration_s = 120
+max_events = 250
+md_output_path = "data/md_ticks.csv"
+
+[marketdata]
+mode = "binance_ws"          # "mock" | "binance_ws" | "polymarket_ws"
+interval_ms = 25             # usado solo por mock
+ws_url = "wss://stream.binance.com:9443/ws"
+rest_url = "https://api.binance.com"
+depth_stream = "depth@100ms" # o "depth@100ms" / "depth@50ms" si existiera
+snapshot_limit = 1000
+reconnect_backoff_ms = 250
+ping_interval_s = 15
+channel_buffer = 10000
+polymarket_ws_url = "wss://ws-subscriptions-clob.polymarket.com/ws/market"
+polymarket_market_id = ""    # opcional; si se setea se envía en subscribe
+polymarket_yes_asset_id = "" # requerido en mode="polymarket_ws"
+polymarket_no_asset_id = ""  # requerido en mode="polymarket_ws"
+polymarket_depth_levels = 5
+
+[strategy]
+threshold_bps = 4.0
+order_qty = 0.01
+refresh_ms = 200
+max_orders_per_min = 120
+
+[risk]
+max_position = 0.10
+max_order_qty = 0.02
+max_notional = 2000.0
+
+[execution]
+venue = "binance_testnet"     # "binance" | "binance_testnet"
+testnet = true
+enable_user_stream = false     # en testnet se deshabilita por defecto; si está true se forzará disable al iniciar
+transport = "rest"             # "rest" | "ws_api"
+rest_url = "https://testnet.binance.vision"
+ws_url = "wss://stream.testnet.binance.vision/ws"
+ws_api_url = "wss://ws-api.testnet.binance.vision/ws-api/v3"
+timeout_ms = 2000
+recv_window_ms = 5000
+rate_limit_per_s = 8
+cancel_mode = "always"         # "always" | "never" | "adaptive"
+wait_cancel_ms = 0
+adaptive_mid_move_bps = 3.0
+adaptive_spread_change_bps = 2.0
+# API credentials deben venir de env vars:
+# BINANCE_API_KEY / BINANCE_API_SECRET
+
+[telemetry]
+report_interval_ms = 5000

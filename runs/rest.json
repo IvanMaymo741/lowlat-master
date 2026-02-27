@@ -1,0 +1,90 @@
+{
+  "started_at_ms": 1772031926525,
+  "finished_at_ms": 1772032375447,
+  "effective_config": {
+    "symbol": "BTCUSDT",
+    "qty": 0.01,
+    "warmup_iterations": 20,
+    "measured_iterations": 300,
+    "summary_window": 10,
+    "summary_global": true,
+    "transport": "rest",
+    "place_method": "POST /api/v3/order",
+    "cancel_method": "DELETE /api/v3/order",
+    "discount_bps": "1000",
+    "cancel_mode": "always",
+    "liquidity_mode": "maker",
+    "execution_rest_url": "https://testnet.binance.vision",
+    "execution_ws_api_url": "wss://ws-api.testnet.binance.vision/ws-api/v3",
+    "execution_ws_url": "wss://stream.testnet.binance.vision/ws",
+    "marketdata_ws_url": "wss://stream.binance.com:9443/ws",
+    "marketdata_rest_url": "https://api.binance.com"
+  },
+  "iteration_counts": {
+    "attempted_total": 320,
+    "attempted_measured": 300,
+    "succeeded_measured": 300,
+    "placed_ok_measured": 300,
+    "canceled_ok_measured": 300
+  },
+  "stats_global": {
+    "place_rtt_us": {
+      "p50": 298281,
+      "p95": 810810,
+      "p99": 821971,
+      "samples": 300
+    },
+    "cancel_rtt_us": {
+      "p50": 298007,
+      "p95": 812220,
+      "p99": 821946,
+      "samples": 300
+    },
+    "place_to_ack_us": {
+      "p50": 597264,
+      "p95": 1114417,
+      "p99": 1622782,
+      "samples": 300
+    },
+    "cancel_to_ack_us": {
+      "p50": 597017,
+      "p95": 1118845,
+      "p99": 1626960,
+      "samples": 300
+    },
+    "rx_to_decide_us": {
+      "p50": 56185,
+      "p95": 95598,
+      "p99": 98743,
+      "samples": 300
+    },
+    "decide_to_ack_us": {
+      "p50": 597267,
+      "p95": 1114424,
+      "p99": 1622789,
+      "samples": 300
+    },
+    "rx_to_ack_us": {
+      "p50": 661652,
+      "p95": 1187395,
+      "p99": 1629255,
+      "samples": 300
+    }
+  },
+  "errors": {
+    "total": {
+      "place_errors": 0,
+      "cancel_errors": 0,
+      "ack_timeouts": 0,
+      "ws_disconnects": 0
+    },
+    "measured": {
+      "place_errors": 0,
+      "cancel_errors": 0,
+      "ack_timeouts": 0,
+      "ws_disconnects": 0
+    },
+    "by_reason": {}
+  },
+  "failed_iterations": []
+}

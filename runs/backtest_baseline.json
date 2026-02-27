@@ -1,0 +1,68 @@
+{
+  "started_at_ms": 1772196401097,
+  "finished_at_ms": 1772196401101,
+  "recording_path": "recordings/btcusdt_2m.ndjson",
+  "recording_hash_sha256": "ff2af744587e8cd2b7ea84a4624f995f6b68d662ef62b7bc95795182fd17bca7",
+  "rows_total": 1181,
+  "rows_parsed": 1181,
+  "parse_errors": 0,
+  "params": {
+    "strategy": {
+      "imbalance_enter": 0.2,
+      "tilt_enter_bps": 0.5,
+      "imbalance_exit": 0.1,
+      "tilt_exit_bps": 0.2,
+      "cooldown_ms": 1500,
+      "rearm": true,
+      "discount_bps": 30.0,
+      "min_rest_ms": 5000,
+      "adverse_mid_move_bps": 15.0
+    },
+    "execution": {
+      "qty": 1.0,
+      "ack_delay_ms": 0,
+      "cancel_delay_ms": 0,
+      "fees_bps": 1.0,
+      "slippage_bps": 0.0
+    }
+  },
+  "summary": {
+    "entries": 0,
+    "cancels": 0,
+    "fills": 0,
+    "fill_rate": 0.0,
+    "avg_time_to_fill_ms": null,
+    "ack_latency_ms": null,
+    "effective_rest_ms": null,
+    "pnl": {
+      "realized_pnl": 0.0,
+      "unrealized_pnl": 0.0,
+      "total_pnl": 0.0,
+      "pnl_bps_on_notional": 0.0
+    },
+    "fees_paid": 0.0,
+    "slippage_cost": 0.0,
+    "adverse_selection_bps_1s": null,
+    "adverse_selection_bps_5s": null,
+    "minute_buckets": [
+      {
+        "minute_index": 0,
+        "pnl": 0.0,
+        "fills": 0,
+        "inventory": 0.0,
+        "drawdown": 0.0
+      },
+      {
+        "minute_index": 1,
+        "pnl": 0.0,
+        "fills": 0,
+        "inventory": 0.0,
+        "drawdown": 0.0
+      }
+    ],
+    "triggers_long": 0,
+    "triggers_short": 0,
+    "cooldown_skips": 0,
+    "rearm_wait_skips": 0
+  }
+}

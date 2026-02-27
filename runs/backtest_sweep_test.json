@@ -1,0 +1,223 @@
+{
+  "started_at_ms": 1772196023387,
+  "finished_at_ms": 1772196023388,
+  "recording_path": "REC_TEST.ndjson",
+  "recording_hash_sha256": "4490369eb3a438300300c23cc1457af34361e7cc2926ab7e660f2bef2912ac3d",
+  "rows_total": 26,
+  "rows_parsed": 26,
+  "parse_errors": 0,
+  "base_params": {
+    "strategy": {
+      "imbalance_enter": 0.2,
+      "tilt_enter_bps": 0.5,
+      "imbalance_exit": 0.1,
+      "tilt_exit_bps": 0.2,
+      "cooldown_ms": 1500,
+      "rearm": true,
+      "discount_bps": 1000.0,
+      "min_rest_ms": 0,
+      "adverse_mid_move_bps": 5.0
+    },
+    "execution": {
+      "qty": 1.0,
+      "ack_delay_ms": 0,
+      "cancel_delay_ms": 0,
+      "fees_bps": 1.0,
+      "slippage_bps": 0.0
+    }
+  },
+  "discount_bps_grid": [
+    1.0,
+    3.0
+  ],
+  "min_rest_ms_grid": [
+    0,
+    100
+  ],
+  "runs": [
+    {
+      "discount_bps": 1.0,
+      "min_rest_ms": 0,
+      "entries": 0,
+      "fills": 0,
+      "fill_rate": 0.0,
+      "total_pnl": 0.0,
+      "realized_pnl": 0.0,
+      "unrealized_pnl": 0.0,
+      "pnl_bps_on_notional": 0.0,
+      "fees_paid": 0.0,
+      "slippage_cost": 0.0,
+      "avg_time_to_fill_ms": null,
+      "sharpe_like": 0.0
+    },
+    {
+      "discount_bps": 1.0,
+      "min_rest_ms": 100,
+      "entries": 0,
+      "fills": 0,
+      "fill_rate": 0.0,
+      "total_pnl": 0.0,
+      "realized_pnl": 0.0,
+      "unrealized_pnl": 0.0,
+      "pnl_bps_on_notional": 0.0,
+      "fees_paid": 0.0,
+      "slippage_cost": 0.0,
+      "avg_time_to_fill_ms": null,
+      "sharpe_like": 0.0
+    },
+    {
+      "discount_bps": 3.0,
+      "min_rest_ms": 0,
+      "entries": 0,
+      "fills": 0,
+      "fill_rate": 0.0,
+      "total_pnl": 0.0,
+      "realized_pnl": 0.0,
+      "unrealized_pnl": 0.0,
+      "pnl_bps_on_notional": 0.0,
+      "fees_paid": 0.0,
+      "slippage_cost": 0.0,
+      "avg_time_to_fill_ms": null,
+      "sharpe_like": 0.0
+    },
+    {
+      "discount_bps": 3.0,
+      "min_rest_ms": 100,
+      "entries": 0,
+      "fills": 0,
+      "fill_rate": 0.0,
+      "total_pnl": 0.0,
+      "realized_pnl": 0.0,
+      "unrealized_pnl": 0.0,
+      "pnl_bps_on_notional": 0.0,
+      "fees_paid": 0.0,
+      "slippage_cost": 0.0,
+      "avg_time_to_fill_ms": null,
+      "sharpe_like": 0.0
+    }
+  ],
+  "top_by_total_pnl": [
+    {
+      "discount_bps": 1.0,
+      "min_rest_ms": 0,
+      "entries": 0,
+      "fills": 0,
+      "fill_rate": 0.0,
+      "total_pnl": 0.0,
+      "realized_pnl": 0.0,
+      "unrealized_pnl": 0.0,
+      "pnl_bps_on_notional": 0.0,
+      "fees_paid": 0.0,
+      "slippage_cost": 0.0,
+      "avg_time_to_fill_ms": null,
+      "sharpe_like": 0.0
+    },
+    {
+      "discount_bps": 1.0,
+      "min_rest_ms": 100,
+      "entries": 0,
+      "fills": 0,
+      "fill_rate": 0.0,
+      "total_pnl": 0.0,
+      "realized_pnl": 0.0,
+      "unrealized_pnl": 0.0,
+      "pnl_bps_on_notional": 0.0,
+      "fees_paid": 0.0,
+      "slippage_cost": 0.0,
+      "avg_time_to_fill_ms": null,
+      "sharpe_like": 0.0
+    },
+    {
+      "discount_bps": 3.0,
+      "min_rest_ms": 0,
+      "entries": 0,
+      "fills": 0,
+      "fill_rate": 0.0,
+      "total_pnl": 0.0,
+      "realized_pnl": 0.0,
+      "unrealized_pnl": 0.0,
+      "pnl_bps_on_notional": 0.0,
+      "fees_paid": 0.0,
+      "slippage_cost": 0.0,
+      "avg_time_to_fill_ms": null,
+      "sharpe_like": 0.0
+    },
+    {
+      "discount_bps": 3.0,
+      "min_rest_ms": 100,
+      "entries": 0,
+      "fills": 0,
+      "fill_rate": 0.0,
+      "total_pnl": 0.0,
+      "realized_pnl": 0.0,
+      "unrealized_pnl": 0.0,
+      "pnl_bps_on_notional": 0.0,
+      "fees_paid": 0.0,
+      "slippage_cost": 0.0,
+      "avg_time_to_fill_ms": null,
+      "sharpe_like": 0.0
+    }
+  ],
+  "top_by_sharpe_like": [
+    {
+      "discount_bps": 1.0,
+      "min_rest_ms": 0,
+      "entries": 0,
+      "fills": 0,
+      "fill_rate": 0.0,
+      "total_pnl": 0.0,
+      "realized_pnl": 0.0,
+      "unrealized_pnl": 0.0,
+      "pnl_bps_on_notional": 0.0,
+      "fees_paid": 0.0,
+      "slippage_cost": 0.0,
+      "avg_time_to_fill_ms": null,
+      "sharpe_like": 0.0
+    },
+    {
+      "discount_bps": 1.0,
+      "min_rest_ms": 100,
+      "entries": 0,
+      "fills": 0,
+      "fill_rate": 0.0,
+      "total_pnl": 0.0,
+      "realized_pnl": 0.0,
+      "unrealized_pnl": 0.0,
+      "pnl_bps_on_notional": 0.0,
+      "fees_paid": 0.0,
+      "slippage_cost": 0.0,
+      "avg_time_to_fill_ms": null,
+      "sharpe_like": 0.0
+    },
+    {
+      "discount_bps": 3.0,
+      "min_rest_ms": 0,
+      "entries": 0,
+      "fills": 0,
+      "fill_rate": 0.0,
+      "total_pnl": 0.0,
+      "realized_pnl": 0.0,
+      "unrealized_pnl": 0.0,
+      "pnl_bps_on_notional": 0.0,
+      "fees_paid": 0.0,
+      "slippage_cost": 0.0,
+      "avg_time_to_fill_ms": null,
+      "sharpe_like": 0.0
+    },
+    {
+      "discount_bps": 3.0,
+      "min_rest_ms": 100,
+      "entries": 0,
+      "fills": 0,
+      "fill_rate": 0.0,
+      "total_pnl": 0.0,
+      "realized_pnl": 0.0,
+      "unrealized_pnl": 0.0,
+      "pnl_bps_on_notional": 0.0,
+      "fees_paid": 0.0,
+      "slippage_cost": 0.0,
+      "avg_time_to_fill_ms": null,
+      "sharpe_like": 0.0
+    }
+  ]
+}

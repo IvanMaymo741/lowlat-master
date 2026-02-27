@@ -1,0 +1,116 @@
+{
+  "started_at_ms": 1772035662194,
+  "finished_at_ms": 1772035662195,
+  "input_path": "recordings/btcusdt_2m.ndjson",
+  "rows_total": 1181,
+  "rows_parsed": 1181,
+  "parse_errors": 0,
+  "thresholds": {
+    "imbalance_enter": 0.2,
+    "tilt_enter_bps": 0.0003,
+    "imbalance_exit": 0.1,
+    "tilt_exit_bps": 0.0001,
+    "cooldown_ms": 1500
+  },
+  "imbalance_stats": {
+    "samples": 1181,
+    "p50": -0.23138380158690552,
+    "p95": 0.9516180597492097,
+    "p99": 0.9946850260604224
+  },
+  "tilt_bps_stats": {
+    "samples": 1181,
+    "p50": -0.00017152137967226148,
+    "p95": 0.0007056090764288595,
+    "p99": 0.0007373911529106655
+  },
+  "imbalance_histogram": [
+    {
+      "bucket": "< -0.8000",
+      "count": 226
+    },
+    {
+      "bucket": "[-0.8000, -0.4000)",
+      "count": 229
+    },
+    {
+      "bucket": "[-0.4000, -0.2000)",
+      "count": 164
+    },
+    {
+      "bucket": "[-0.2000, -0.1000)",
+      "count": 44
+    },
+    {
+      "bucket": "[-0.1000, 0.0000)",
+      "count": 65
+    },
+    {
+      "bucket": "[0.0000, 0.1000)",
+      "count": 61
+    },
+    {
+      "bucket": "[0.1000, 0.2000)",
+      "count": 59
+    },
+    {
+      "bucket": "[0.2000, 0.4000)",
+      "count": 56
+    },
+    {
+      "bucket": "[0.4000, 0.8000)",
+      "count": 122
+    },
+    {
+      "bucket": ">= 0.8000",
+      "count": 155
+    }
+  ],
+  "tilt_bps_histogram": [
+    {
+      "bucket": "< -5.0000bps",
+      "count": 0
+    },
+    {
+      "bucket": "[-5.0000bps, -2.0000bps)",
+      "count": 0
+    },
+    {
+      "bucket": "[-2.0000bps, -1.0000bps)",
+      "count": 0
+    },
+    {
+      "bucket": "[-1.0000bps, -0.5000bps)",
+      "count": 0
+    },
+    {
+      "bucket": "[-0.5000bps, 0.0000bps)",
+      "count": 728
+    },
+    {
+      "bucket": "[0.0000bps, 0.5000bps)",
+      "count": 453
+    },
+    {
+      "bucket": "[0.5000bps, 1.0000bps)",
+      "count": 0
+    },
+    {
+      "bucket": "[1.0000bps, 2.0000bps)",
+      "count": 0
+    },
+    {
+      "bucket": "[2.0000bps, 5.0000bps)",
+      "count": 0
+    },
+    {
+      "bucket": ">= 5.0000bps",
+      "count": 0
+    }
+  ],
+  "triggers_long": 274,
+  "triggers_short": 454,
+  "entries": 34,
+  "cancels": 33,
+  "cooldown_skips": 265
+}

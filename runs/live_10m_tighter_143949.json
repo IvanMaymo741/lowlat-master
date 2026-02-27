@@ -1,0 +1,559 @@
+{
+  "started_at_ms": 1772041195557,
+  "finished_at_ms": 1772041796266,
+  "requested_run_for_s": 600,
+  "actual_elapsed_s": 600.0011895,
+  "exit_reason": "timeout",
+  "warmup_s": 5,
+  "warmup_actions_excluded": 0,
+  "effective_config": {
+    "symbol": "BTCUSDT",
+    "qty": 0.01,
+    "transport": "ws_api",
+    "discount_bps": 1000.0,
+    "thresholds": {
+      "imbalance_enter": 0.75,
+      "tilt_enter_bps": 0.00075,
+      "imbalance_exit": 0.45,
+      "tilt_exit_bps": 0.00045,
+      "cooldown_ms": 2500
+    },
+    "max_actions_per_minute": 60,
+    "max_consecutive_errors": 5,
+    "latency_spike_ms": 2500,
+    "max_latency_spikes": 5,
+    "rest_url": "https://testnet.binance.vision",
+    "ws_api_url": "wss://ws-api.testnet.binance.vision/ws-api/v3"
+  },
+  "counters": {
+    "triggers_long": 12,
+    "triggers_short": 9,
+    "entries": 15,
+    "cancels": 15,
+    "cooldown_skips": 5,
+    "rearm_wait_skips": 0,
+    "errors": 0,
+    "action_rate_limit_skips": 0
+  },
+  "place_rtt_us": {
+    "samples": 15,
+    "p50": 317129,
+    "p95": 2274109,
+    "p99": 2291088
+  },
+  "cancel_rtt_us": {
+    "samples": 15,
+    "p50": 317715,
+    "p95": 376151,
+    "p99": 377780
+  },
+  "place_rtt_us_excluding_warmup": {
+    "samples": 15,
+    "p50": 317129,
+    "p95": 2274109,
+    "p99": 2291088
+  },
+  "cancel_rtt_us_excluding_warmup": {
+    "samples": 15,
+    "p50": 317715,
+    "p95": 376151,
+    "p99": 377780
+  },
+  "latency_spike_stats": {
+    "threshold_ms": 2500,
+    "threshold_us": 2500000,
+    "warmup_actions_ignored": 2,
+    "last_n_rtt_us": [
+      318633,
+      317344,
+      2291088,
+      310240,
+      310717,
+      310925,
+      310266,
+      309676,
+      308242,
+      356616,
+      310018,
+      365904,
+      311341,
+      366229,
+      2274109,
+      306735,
+      306722,
+      351158,
+      308252,
+      352119
+    ],
+    "spikes_count_total": 0,
+    "max_rtt_us": 2291088,
+    "spike_streak_final": 0
+  },
+  "minute_buckets": [
+    {
+      "minute_index": 0,
+      "triggers": 2,
+      "entries": 2,
+      "cancels": 2,
+      "rate_limit_skips": 0,
+      "place_rtt_us": {
+        "samples": 2,
+        "p50": 1824675,
+        "p95": 1824675,
+        "p99": 1824675
+      },
+      "cancel_rtt_us": {
+        "samples": 2,
+        "p50": 317715,
+        "p95": 317715,
+        "p99": 317715
+      }
+    },
+    {
+      "minute_index": 1,
+      "triggers": 1,
+      "entries": 1,
+      "cancels": 1,
+      "rate_limit_skips": 0,
+      "place_rtt_us": {
+        "samples": 1,
+        "p50": 317227,
+        "p95": 317227,
+        "p99": 317227
+      },
+      "cancel_rtt_us": {
+        "samples": 1,
+        "p50": 376151,
+        "p95": 376151,
+        "p99": 376151
+      }
+    },
+    {
+      "minute_index": 2,
+      "triggers": 1,
+      "entries": 1,
+      "cancels": 1,
+      "rate_limit_skips": 0,
+      "place_rtt_us": {
+        "samples": 1,
+        "p50": 317286,
+        "p95": 317286,
+        "p99": 317286
+      },
+      "cancel_rtt_us": {
+        "samples": 1,
+        "p50": 377780,
+        "p95": 377780,
+        "p99": 377780
+      }
+    },
+    {
+      "minute_index": 3,
+      "triggers": 2,
+      "entries": 2,
+      "cancels": 2,
+      "rate_limit_skips": 0,
+      "place_rtt_us": {
+        "samples": 2,
+        "p50": 318633,
+        "p95": 318633,
+        "p99": 318633
+      },
+      "cancel_rtt_us": {
+        "samples": 2,
+        "p50": 317344,
+        "p95": 317344,
+        "p99": 317344
+      }
+    },
+    {
+      "minute_index": 4,
+      "triggers": 3,
+      "entries": 2,
+      "cancels": 2,
+      "rate_limit_skips": 0,
+      "place_rtt_us": {
+        "samples": 2,
+        "p50": 2291088,
+        "p95": 2291088,
+        "p99": 2291088
+      },
+      "cancel_rtt_us": {
+        "samples": 2,
+        "p50": 310925,
+        "p95": 310925,
+        "p99": 310925
+      }
+    },
+    {
+      "minute_index": 5,
+      "triggers": 8,
+      "entries": 3,
+      "cancels": 3,
+      "rate_limit_skips": 0,
+      "place_rtt_us": {
+        "samples": 3,
+        "p50": 310018,
+        "p95": 310266,
+        "p99": 310266
+      },
+      "cancel_rtt_us": {
+        "samples": 3,
+        "p50": 356616,
+        "p95": 365904,
+        "p99": 365904
+      }
+    },
+    {
+      "minute_index": 6,
+      "triggers": 1,
+      "entries": 1,
+      "cancels": 1,
+      "rate_limit_skips": 0,
+      "place_rtt_us": {
+        "samples": 1,
+        "p50": 311341,
+        "p95": 311341,
+        "p99": 311341
+      },
+      "cancel_rtt_us": {
+        "samples": 1,
+        "p50": 366229,
+        "p95": 366229,
+        "p99": 366229
+      }
+    },
+    {
+      "minute_index": 7,
+      "triggers": 1,
+      "entries": 1,
+      "cancels": 1,
+      "rate_limit_skips": 0,
+      "place_rtt_us": {
+        "samples": 1,
+        "p50": 2274109,
+        "p95": 2274109,
+        "p99": 2274109
+      },
+      "cancel_rtt_us": {
+        "samples": 1,
+        "p50": 306735,
+        "p95": 306735,
+        "p99": 306735
+      }
+    },
+    {
+      "minute_index": 8,
+      "triggers": 1,
+      "entries": 1,
+      "cancels": 1,
+      "rate_limit_skips": 0,
+      "place_rtt_us": {
+        "samples": 1,
+        "p50": 306722,
+        "p95": 306722,
+        "p99": 306722
+      },
+      "cancel_rtt_us": {
+        "samples": 1,
+        "p50": 351158,
+        "p95": 351158,
+        "p99": 351158
+      }
+    },
+    {
+      "minute_index": 9,
+      "triggers": 1,
+      "entries": 1,
+      "cancels": 1,
+      "rate_limit_skips": 0,
+      "place_rtt_us": {
+        "samples": 1,
+        "p50": 308252,
+        "p95": 308252,
+        "p99": 308252
+      },
+      "cancel_rtt_us": {
+        "samples": 1,
+        "p50": 352119,
+        "p95": 352119,
+        "p99": 352119
+      }
+    }
+  ],
+  "state_transitions": [
+    {
+      "ts_ms": 1772041206119,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772041206214,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772041206314,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772041227017,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772041227114,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772041227214,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772041290614,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772041290714,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772041290814,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772041336614,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772041336714,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772041336814,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772041390521,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772041391214,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_adverse"
+    },
+    {
+      "ts_ms": 1772041391514,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772041395846,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772041395914,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772041396614,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772041496167,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772041496323,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_adverse"
+    },
+    {
+      "ts_ms": 1772041496414,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772041499561,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772041499635,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772041499914,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772041506560,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772041506743,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772041506814,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772041522342,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772041522614,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772041522814,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772041538114,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772041538214,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772041538314,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772041567724,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772041567814,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772041567914,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772041668314,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772041668414,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772041668514,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772041691114,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772041691514,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772041691614,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    },
+    {
+      "ts_ms": 1772041773615,
+      "from": "armed",
+      "to": "in_trade",
+      "reason": "entered_trade"
+    },
+    {
+      "ts_ms": 1772041774014,
+      "from": "in_trade",
+      "to": "wait_rearm",
+      "reason": "canceled_neutral"
+    },
+    {
+      "ts_ms": 1772041774714,
+      "from": "wait_rearm",
+      "to": "armed",
+      "reason": "rearmed"
+    }
+  ],
+  "error_reasons": {},
+  "stopped_by_kill_switch": false,
+  "kill_switch_reason": null
+}
