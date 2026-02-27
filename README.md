@@ -11,6 +11,7 @@ Scaffold inicial de un bot de trading modular en Rust con 9 binarios:
 - `backtest_runner`: backtest offline con modelo maker-fill + PnL sobre recording NDJSON/CSV.
 - `backtest_sweep`: grid search offline (discount/min_rest) con ranking por PnL y sharpe-like.
 - `polymarket_md_recorder`: recorder dedicado para Polymarket (NDJSON, multi-market, heartbeat).
+- `polymarket_arb_bot`: scanner ultra-liviano de ineficiencias YES/NO (edge por bundle y ranking).
 
 ## Stack
 
@@ -90,6 +91,15 @@ cargo run --bin polymarket_md_recorder -- \
   --out data/polymarket/ \
   --heartbeat-secs 30 \
   --flush-every 10
+
+
+# scanner de arbitraje YES/NO (solo detección, sin ejecución automática)
+cargo run --release --bin polymarket_arb_bot -- \
+  --config config/default.toml \
+  --min-edge-bps 8 \
+  --min-depth 100 \
+  --cooldown-ms 75 \
+  --top-k 20
 
 # debug de ingest sin I/O a disco
 cargo run --bin md_recorder -- --config config/default.toml --duration-s 30 --out recordings/ --dry-run

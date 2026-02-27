@@ -135,6 +135,92 @@ pub enum SignalDirection {
     Short,
 }
 
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize)]
+#[serde(rename_all = "snake_case")]
+pub enum PolymarketArbSide {
+    BuyBundle,
+    SellBundle,
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Serialize)]
+pub struct PolymarketArbOpportunity {
+    pub side: PolymarketArbSide,
+    pub edge_bps: f64,
+    pub edge_pct: f64,
+    pub yes_price: f64,
+    pub no_price: f64,
+    pub bundle_price: f64,
+    pub executable_depth: Option<f64>,
+}
+
+#[derive(Debug, Clone, Copy, PartialEq)]
+pub struct PolymarketArbThresholds {
+    pub min_edge_bps: f64,
+    pub min_depth: f64,
+}
+
+impl Default for PolymarketArbThresholds {
+    fn default() -> Self {
+        Self {
+            min_edge_bps: 5.0,
+            min_depth: 0.0,
+        }
+    }
+}
+
+pub fn detect_polymarket_arb(
+    snapshot: &crate::marketdata::MarketEvent,
+    thresholds: &PolymarketArbThresholds,
+) -> Option<PolymarketArbOpportunity> {
+    let yes_ask = snapshot.yes_best_ask?;
+    let no_ask = snapshot.no_best_ask?;
+    let yes_bid = snapshot.yes_best_bid?;
+    let no_bid = snapshot.no_best_bid?;
+
+    let min_edge_fraction = thresholds.min_edge_bps.max(0.0) / 10_000.0;
+
+    let executable_depth = snapshot
+        .yes_depth
+        .zip(snapshot.no_depth)
+        .map(|(yes, no)| yes.min(no));
+
+    if let Some(depth) = executable_depth {
+        if depth < thresholds.min_depth.max(0.0) {
+            return None;
+        }
+    }
+
+    let buy_bundle_price = yes_ask + no_ask;
+    let buy_edge = 1.0 - buy_bundle_price;
+    if buy_edge >= min_edge_fraction {
+        return Some(PolymarketArbOpportunity {
+            side: PolymarketArbSide::BuyBundle,
+            edge_bps: buy_edge * 10_000.0,
+            edge_pct: buy_edge * 100.0,
+            yes_price: yes_ask,
+            no_price: no_ask,
+            bundle_price: buy_bundle_price,
+            executable_depth,
+        });
+    }
+
+    let sell_bundle_price = yes_bid + no_bid;
+    let sell_edge = sell_bundle_price - 1.0;
+    if sell_edge >= min_edge_fraction {
+        return Some(PolymarketArbOpportunity {
+            side: PolymarketArbSide::SellBundle,
+            edge_bps: sell_edge * 10_000.0,
+            edge_pct: sell_edge * 100.0,
+            yes_price: yes_bid,
+            no_price: no_bid,
+            bundle_price: sell_bundle_price,
+            executable_depth,
+        });
+    }
+
+    None
+}
+
 pub fn long_trigger(snapshot: &SignalSnapshot, thresholds: &SignalThresholds) -> bool {
     snapshot.imbalance > thresholds.imbalance_enter && snapshot.tilt_bps > thresholds.tilt_enter_bps
 }
@@ -404,8 +490,9 @@ impl SignalRunner {
 #[cfg(test)]
 mod tests {
     use super::{
-        compute_signal_snapshot, MidReversionStrategy, RunnerAction, RunnerPhase, Signal,
-        SignalRunner, SignalSnapshot, SignalThresholds, Strategy,
+        compute_signal_snapshot, detect_polymarket_arb, MidReversionStrategy, PolymarketArbSide,
+        PolymarketArbThresholds, RunnerAction, RunnerPhase, Signal, SignalRunner, SignalSnapshot,
+        SignalThresholds, Strategy,
     };
     use crate::marketdata::MarketEvent;
     use crate::orderbook::OrderBook;
@@ -527,5 +614,42 @@ mod tests {
         let rearmed = runner.on_snapshot(&snapshot(1_300, 0.01, 0.01));
         assert_eq!(rearmed.action, RunnerAction::None);
         assert_eq!(runner.phase(), RunnerPhase::Armed);
+    }
+
+    #[test]
+    fn detects_buy_bundle_arb() {
+        let mut event = MarketEvent::new("pm", 0.48, 0.49, 1);
+        event.yes_best_bid = Some(0.48);
+        event.yes_best_ask = Some(0.49);
+        event.no_best_bid = Some(0.49);
+        event.no_best_ask = Some(0.50);
+        event.yes_depth = Some(120.0);
+        event.no_depth = Some(90.0);
+
+        let thresholds = PolymarketArbThresholds {
+            min_edge_bps: 5.0,
+            min_depth: 50.0,
+        };
+        let opportunity = detect_polymarket_arb(&event, &thresholds).expect("arb expected");
+        assert_eq!(opportunity.side, PolymarketArbSide::BuyBundle);
+        assert!((opportunity.edge_bps - 100.0).abs() < 1e-9);
+        assert_eq!(opportunity.executable_depth, Some(90.0));
+    }
+
+    #[test]
+    fn detects_sell_bundle_arb() {
+        let mut event = MarketEvent::new("pm", 0.50, 0.51, 1);
+        event.yes_best_bid = Some(0.53);
+        event.yes_best_ask = Some(0.54);
+        event.no_best_bid = Some(0.48);
+        event.no_best_ask = Some(0.49);
+
+        let thresholds = PolymarketArbThresholds {
+            min_edge_bps: 5.0,
+            min_depth: 0.0,
+        };
+        let opportunity = detect_polymarket_arb(&event, &thresholds).expect("arb expected");
+        assert_eq!(opportunity.side, PolymarketArbSide::SellBundle);
+        assert!((opportunity.bundle_price - 1.01).abs() < 1e-9);
     }
 }
